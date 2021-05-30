@@ -1,0 +1,312 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "_mixin";
+
+$font-unit: 0.0625rem !default;
+$fs72: $font-unit*72; // 72px
+$fs54: $font-unit*54; // 54px
+$fs48: $font-unit*48; // 48px
+$fs32: $font-unit*32; // 32px
+$fs26: $font-unit*26; // 26px
+$fs20: $font-unit*20; // 20px
+
+$fs60: $font-unit*60; // 60px
+$fs40: $font-unit*40; // 40px
+$fs24: $font-unit*24; // 24px
+$fs16: $font-unit*16; // 16px
+
+$fonts-lg: $fs72, $fs54, $fs48, $fs32, $fs26, $fs20;
+$fonts-sm: $fs60, $fs40, $fs32, $fs24, $fs20, $fs16;
+
+@for $i from 1 through length($fonts-lg) {
+    h#{$i},
+    .h#{$i} {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: nth($fonts-sm, $i);
+        @media screen and (min-width: 1024px) {
+            font-size: nth($fonts-lg, $i);
+        }
+    }
+}
+
+.letter-spacing-1 {
+    letter-spacing: 0.15em;
+    @media (min-width: 768px) {
+        letter-spacing: 0.38888889em;
+    }
+}
+.letter-spacing-2 {
+    letter-spacing: 0.075em;
+    @media (min-width: 768px) {
+        letter-spacing: 0.2em;
+    }
+}
+.letter-spacing-3 {
+    letter-spacing: 0.02em;
+    @media (min-width: 768px) {
+        letter-spacing: 0.06em;
+    }
+}
+.letter-spacing-4 {
+    letter-spacing: 0.0075em;
+    @media (min-width: 768px) {
+        letter-spacing: 0.03em;
+    }
+}
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+a, button.btn {
+    text-decoration: none;
+    @include breakpoint(1024px) {
+        @include transition(color .2s, border .2s, background .2s);
+    }
+}
+
+a.logo {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    @include border-radius(0 0 0.75rem 0.75rem);
+    @include box-shadow(0 0 10px 0 rgba($black, 0.2));
+    z-index: 2;
+    @media (min-width: 576px) {
+        left: calc((100% - 540px) / 2);
+    }
+    @media (min-width: 768px) {
+        left: calc((100% - 720px) / 2);
+    }
+    @media (min-width: 992px) {
+        left: calc((100% - 960px) / 2);
+    }
+    @media (min-width: 1200px) {
+        left: calc((100% - 1140px) / 2);
+    }
+    img {
+        width: 100px;
+        @media (min-width: 768px) {
+            width: 135px;
+        }
+    }
+}
+
+section {
+    @media (min-width: 768px) {
+        height: 100%;
+        min-height: 100%;
+    }
+    &.white-fluid {
+        background-image: url('../images/backgroud-light@3x.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .bg-fluid {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../images/backgroud-blue@3x.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        z-index: 0;
+        @media (min-width: 768px) {
+            position: absolute;
+            height: 100%;
+        }    
+        &::before, &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            z-index: 0;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+            border-width: 125vh 125vw 0 0;
+            border-color: rgba($primary, 0.9) transparent transparent transparent;
+            @media screen and (orientation: portrait) {
+                border-width: 90vh 300vw 0 0;
+            }
+        }
+        &::after {
+            bottom: 0;
+            right: 0;
+            border-width: 0 0 75vh 75vw;
+            border-color: transparent transparent $white transparent;
+            @media screen and (orientation: portrait) {
+                border-width: 0 0 40.5vh 134.5vw;
+            }
+        }
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            width: 45%;
+            z-index: 1;
+            @media screen and (orientation: portrait) {
+                right: 15px;
+                width: calc(100% - 30px);
+            }
+        }
+    }
+    .container {
+        position: relative;
+        min-height: 100vh;
+        z-index: 1;
+        @media (min-width: 768px) {
+            height: 100%;
+            min-height: 100%;
+        }
+    }
+}
+
+h1 {
+    letter-spacing: 0.38888889em;
+    text-shadow: 10px 10px 0 rgba($black, 0.15);
+}
+
+.ribbon {
+    position: relative;
+    z-index: 1;
+    @media (max-width: 499px) {
+        width: 80%;
+    }
+    &::before, &::after {
+        @include beforeafter('', block);
+        position: absolute;
+        bottom: -26px;
+        width: 52px;
+        height: 52px;
+        background-image: url('../images/ribbon-decorate.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+    &::before {
+        left: -30px;
+    }
+    &::after {
+        right: -30px;
+        @include scaleX(-1);
+    }
+    span {
+        line-height: 32px;
+    }
+}
+
+a.btn-go {
+    display: inline-block;
+    width: 100px;
+    color: $white;
+    font-size: $fs48;
+    line-height: 100px;
+    text-shadow: 0 3px 5px rgba($black, 0.15);
+    background-color: $pink;
+    border-radius: 50%;
+    @media (min-width: 768px) {
+        width: 150px;
+        font-size: $fs72;
+        line-height: 150px;
+    }
+    &:hover {
+        text-decoration: none;
+        background-color: darken($pink, 5%);
+    }
+}
+
+.option-group {
+    width: 100%;
+    max-width: 300px;
+    min-height: 72px * 4 + 20px;
+    @media screen and (min-width: 1024px) {
+        max-width: 420px;
+        min-height: 84px * 4 + 20px;
+    }
+    a {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: $white;
+        background-color: #1279AF;
+        border: 3px solid $white;
+        @include border-radius(40px);
+        &:hover {
+            color: $primary;
+            background-color: $warning;
+            text-decoration: none;
+        }
+    }
+}
+
+img.main-icon {
+    width: 45%;
+    max-width: 240px;
+    @media (min-width: 992px) {
+        width: 80%;
+    }
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        padding-right: calc(6em + 40px);
+    }
+    .button-center {
+        @media screen and (min-width: 1024px) {
+            padding-left: calc(6em + 40px);
+        }
+        button {
+            display: block;
+            width: 80%;
+            color: $white;
+            background-color: #1279AF;
+            border: 0;
+            outline: 0;
+            @include border-radius(40px);
+            cursor: pointer;
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+            }
+            &:hover {
+                color: $primary;
+                background-color: $warning;
+            }
+        }
+    }
+    label {
+        width: 6em;
+    }
+    input[type='tel'],
+    input[type='text'] {
+        width: calc(100% - 6em - 20px);
+        line-height: 1.8;
+        border: 1px solid rgba($black, 0.5);
+        outline: 0;
+        @include border-radius(40px);
+        @media screen and (min-width: 768px) {
+            width: calc(100% - 6em - 40px);
+        }
+    }
+    input[type='checkbox'] {
+        width: 20px;
+        height: 20px;
+        + label {
+            width: calc(100% - 30px);
+        }
+    }
+}
