@@ -164,7 +164,7 @@ section {
     }
     .container {
         position: relative;
-        min-height: 100vh;
+        // min-height: 100vh;
         z-index: 1;
         @media (min-width: 768px) {
             height: 100%;
