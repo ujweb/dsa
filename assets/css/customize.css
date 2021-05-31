@@ -79,20 +79,21 @@ a.btn-go:hover { text-decoration: none; background-color: #ed1c38; }
   to { top: 10px; } }
 .option-group { width: 100%; max-width: 300px; min-height: 308px; }
 @media screen and (min-width: 1024px) { .option-group { max-width: 420px; min-height: 356px; } }
-.option-group a { display: block; margin-left: auto; margin-right: auto; color: #fff; background-color: #1279AF; border: 3px solid #fff; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
+.option-group a { display: block; margin-left: auto; margin-right: auto; color: #fff; line-height: 1.5; background-color: #1279AF; border: 3px solid #fff; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
 .option-group a:hover { color: #008CD6; background-color: #FFCC33; text-decoration: none; }
 
-img.main-icon { width: 45%; max-width: 240px; }
+img.main-icon { width: 40%; max-width: 120px; }
+@media (min-width: 768px) { img.main-icon { max-width: 240px; } }
 @media (min-width: 992px) { img.main-icon { width: 80%; } }
 
-form { max-width: 600px; width: 100%; }
+form { max-width: 600px; width: 100%; line-height: 1.5; }
 @media screen and (min-width: 1024px) { form { padding-right: calc(6em + 40px); } }
 @media screen and (min-width: 1024px) { form .button-center { padding-left: calc(6em + 40px); } }
 form .button-center button { display: block; width: 80%; color: #fff; background-color: #1279AF; border: 0; outline: 0; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; cursor: pointer; }
 @media screen and (min-width: 1024px) { form .button-center button { width: 100%; } }
 form .button-center button:hover { color: #008CD6; background-color: #FFCC33; }
-form label { width: 6em; }
-form input[type='tel'], form input[type='text'] { width: calc(100% - 6em - 20px); line-height: 1.8; border: 1px solid rgba(0, 0, 0, 0.5); outline: 0; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
-@media screen and (min-width: 768px) { form input[type='tel'], form input[type='text'] { width: calc(100% - 6em - 40px); } }
+form label { width: 6.2em; }
+form input[type='tel'], form input[type='text'] { width: calc(100% - 6.2em - 20px); line-height: 1.8; border: 1px solid rgba(0, 0, 0, 0.5); outline: 0; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
+@media screen and (min-width: 768px) { form input[type='tel'], form input[type='text'] { width: calc(100% - 6.2em - 40px); } }
 form input[type='checkbox'] { width: 20px; height: 20px; }
 form input[type='checkbox'] + label { width: calc(100% - 30px); }

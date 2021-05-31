@@ -256,6 +256,7 @@ a.btn-go {
         margin-left: auto;
         margin-right: auto;
         color: $white;
+        line-height: 1.5;
         background-color: #1279AF;
         border: 3px solid $white;
         @include border-radius(40px);
@@ -268,8 +269,11 @@ a.btn-go {
 }
 
 img.main-icon {
-    width: 45%;
-    max-width: 240px;
+    width: 40%;
+    max-width: 120px;
+    @media (min-width: 768px) {
+        max-width: 240px;
+    }
     @media (min-width: 992px) {
         width: 80%;
     }
@@ -278,6 +282,7 @@ img.main-icon {
 form {
     max-width: 600px;
     width: 100%;
+    line-height: 1.5;
     @media screen and (min-width: 1024px) {
         padding-right: calc(6em + 40px);
     }
@@ -304,17 +309,17 @@ form {
         }
     }
     label {
-        width: 6em;
+        width: 6.2em;
     }
     input[type='tel'],
     input[type='text'] {
-        width: calc(100% - 6em - 20px);
+        width: calc(100% - 6.2em - 20px);
         line-height: 1.8;
         border: 1px solid rgba($black, 0.5);
         outline: 0;
         @include border-radius(40px);
         @media screen and (min-width: 768px) {
-            width: calc(100% - 6em - 40px);
+            width: calc(100% - 6.2em - 40px);
         }
     }
     input[type='checkbox'] {
