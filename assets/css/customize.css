@@ -57,7 +57,8 @@ section .bg-fluid img { position: absolute; bottom: 0; right: 20px; width: 45%; 
 section .container { position: relative; min-height: 100vh; z-index: 1; }
 @media (min-width: 768px) { section .container { height: 100%; min-height: 100%; } }
 
-h1 { letter-spacing: 0.38888889em; text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15); }
+h1 { letter-spacing: 0.38888889em; text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15); }
+@media screen and (min-width: 1024px) { h1 { text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15); } }
 
 .ribbon { position: relative; z-index: 1; }
 @media (max-width: 499px) { .ribbon { width: 80%; } }
