@@ -59,10 +59,13 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
-  line-height: $line-height-base;
+  line-height: $line-height-base*0.8;
   color: $body-color;
   text-align: left; // 3
   background-color: $body-bg; // 2
+  @media screen and (min-width: 1024px) {
+    line-height: $line-height-base;
+  }
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.

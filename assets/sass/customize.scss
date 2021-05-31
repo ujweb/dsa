@@ -31,7 +31,7 @@ $fonts-sm: $fs60, $fs40, $fs32, $fs24, $fs20, $fs16;
 }
 
 .letter-spacing-1 {
-    letter-spacing: 0.15em;
+    letter-spacing: 0.125em;
     @media (min-width: 768px) {
         letter-spacing: 0.38888889em;
     }
@@ -210,6 +210,8 @@ h1 {
 
 a.btn-go {
     display: inline-block;
+    position: relative;
+    top: 0;
     width: 100px;
     color: $white;
     font-size: $fs48;
@@ -217,7 +219,8 @@ a.btn-go {
     text-shadow: 0 3px 5px rgba($black, 0.15);
     background-color: $pink;
     border-radius: 50%;
-    @media (min-width: 768px) {
+    @include animation(bounce 0.5s cubic-bezier(0.3, 0.7, 1, 1) infinite alternate both);
+    @media(min-width: 768px) {
         width: 150px;
         font-size: $fs72;
         line-height: 150px;
@@ -225,6 +228,15 @@ a.btn-go {
     &:hover {
         text-decoration: none;
         background-color: darken($pink, 5%);
+    }
+}
+
+@include keyframes(bounce) {
+    from {
+        top: 0;
+    }
+    to {
+        top: 10px;
     }
 }
 

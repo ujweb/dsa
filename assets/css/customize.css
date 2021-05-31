@@ -16,7 +16,7 @@ h5, .h5 { margin-top: 1em; margin-bottom: 1em; font-size: 1.25rem; }
 h6, .h6 { margin-top: 1em; margin-bottom: 1em; font-size: 1rem; }
 @media screen and (min-width: 1024px) { h6, .h6 { font-size: 1.25rem; } }
 
-.letter-spacing-1 { letter-spacing: 0.15em; }
+.letter-spacing-1 { letter-spacing: 0.125em; }
 @media (min-width: 768px) { .letter-spacing-1 { letter-spacing: 0.38888889em; } }
 
 .letter-spacing-2 { letter-spacing: 0.075em; }
@@ -66,10 +66,16 @@ h1 { letter-spacing: 0.38888889em; text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.15);
 .ribbon::after { right: -30px; -moz-transform: scaleX(-1); -ms-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); }
 .ribbon span { line-height: 32px; }
 
-a.btn-go { display: inline-block; width: 100px; color: #fff; font-size: 3rem; line-height: 100px; text-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); background-color: #EF344D; border-radius: 50%; }
+a.btn-go { display: inline-block; position: relative; top: 0; width: 100px; color: #fff; font-size: 3rem; line-height: 100px; text-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); background-color: #EF344D; border-radius: 50%; -moz-animation: bounce 0.5s cubic-bezier(0.3, 0.7, 1, 1) infinite alternate both; -webkit-animation: bounce 0.5s cubic-bezier(0.3, 0.7, 1, 1) infinite alternate both; animation: bounce 0.5s cubic-bezier(0.3, 0.7, 1, 1) infinite alternate both; }
 @media (min-width: 768px) { a.btn-go { width: 150px; font-size: 4.5rem; line-height: 150px; } }
 a.btn-go:hover { text-decoration: none; background-color: #ed1c38; }
 
+@-moz-keyframes bounce { from { top: 0; }
+  to { top: 10px; } }
+@-webkit-keyframes bounce { from { top: 0; }
+  to { top: 10px; } }
+@keyframes bounce { from { top: 0; }
+  to { top: 10px; } }
 .option-group { width: 100%; max-width: 300px; min-height: 308px; }
 @media screen and (min-width: 1024px) { .option-group { max-width: 420px; min-height: 356px; } }
 .option-group a { display: block; margin-left: auto; margin-right: auto; color: #fff; background-color: #1279AF; border: 3px solid #fff; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
