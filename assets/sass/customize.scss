@@ -107,6 +107,9 @@ section {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @media screen and (orientation: portrait) {
+            background-position: left;
+        }
     }
     .bg-fluid {
         position: fixed;
@@ -164,7 +167,7 @@ section {
     }
     .container {
         position: relative;
-        // min-height: 100vh;
+        min-height: 100vh;
         z-index: 1;
         @media (min-width: 768px) {
             height: 100%;
