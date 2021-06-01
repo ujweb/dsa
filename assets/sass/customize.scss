@@ -329,7 +329,8 @@ form {
         width: 20px;
         height: 20px;
         + label {
-            width: calc(100% - 30px);
+            width: auto;
+            max-width: calc(100% - 30px);
         }
     }
 }
