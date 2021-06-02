@@ -54,7 +54,7 @@ section .bg-fluid::before { top: 0; left: 0; border-width: 125vh 125vw 0 0; bord
 section .bg-fluid::after { bottom: 0; right: 0; border-width: 0 0 75vh 75vw; border-color: transparent transparent #fff transparent; }
 @media screen and (orientation: portrait) { section .bg-fluid::after { border-width: 0 0 59vh 207vw; } }
 section .bg-fluid img { position: absolute; bottom: 0; right: 20px; width: 45%; z-index: 1; }
-@media screen and (orientation: portrait) { section .bg-fluid img { right: 15px; bottom: 15px; width: calc(100% - 30px); } }
+@media screen and (orientation: portrait) { section .bg-fluid img { right: 15px; width: calc(100% - 30px); } }
 section .container { position: relative; height: 100%; z-index: 1; }
 @media (min-width: 768px) { section .container { height: 100%; min-height: 100vh; } }
 
