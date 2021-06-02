@@ -50,9 +50,9 @@ section .bg-fluid { position: fixed; top: 0; left: 0; width: 100%; height: 100%;
 @media (min-width: 768px) { section .bg-fluid { position: absolute; height: 100%; } }
 section .bg-fluid::before, section .bg-fluid::after { content: ""; display: block; position: absolute; width: 0; height: 0; border-style: solid; z-index: 0; }
 section .bg-fluid::before { top: 0; left: 0; border-width: 125vh 125vw 0 0; border-color: rgba(0, 140, 214, 0.9) transparent transparent transparent; }
-@media screen and (orientation: portrait) { section .bg-fluid::before { border-width: 70vh 250vw 0 00; } }
+@media screen and (orientation: portrait) { section .bg-fluid::before { border-width: 90vh 300vw 0 0; } }
 section .bg-fluid::after { bottom: 0; right: 0; border-width: 0 0 75vh 75vw; border-color: transparent transparent #fff transparent; }
-@media screen and (orientation: portrait) { section .bg-fluid::after { border-width: 0 0 59vh 207vw; } }
+@media screen and (orientation: portrait) { section .bg-fluid::after { border-width: 0 0 40.5vh 134.5vw; } }
 section .bg-fluid img { position: absolute; bottom: 0; right: 20px; width: 45%; z-index: 1; }
 @media screen and (orientation: portrait) { section .bg-fluid img { right: 15px; width: calc(100% - 30px); } }
 section .container { position: relative; height: 100%; z-index: 1; }

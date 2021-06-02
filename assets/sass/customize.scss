@@ -138,7 +138,7 @@ section {
             border-width: 125vh 125vw 0 0;
             border-color: rgba($primary, 0.9) transparent transparent transparent;
             @media screen and (orientation: portrait) {
-                border-width: 70vh 250vw 0 00;
+                border-width: 90vh 300vw 0 0;
             }
         }
         &::after {
@@ -147,7 +147,7 @@ section {
             border-width: 0 0 75vh 75vw;
             border-color: transparent transparent $white transparent;
             @media screen and (orientation: portrait) {
-                border-width: 0 0 59vh 207vw;
+                border-width: 0 0 40.5vh 134.5vw;
             }
         }
         img {
