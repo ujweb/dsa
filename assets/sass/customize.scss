@@ -90,12 +90,6 @@ a.logo {
         @media (min-width: 1200px) {
             left: calc((100% - 1140px) / 2);
         }
-        img {
-            height: 55px;
-            @media (min-width: 768px) {
-                height: 75px;
-            }
-        }
     }
     &.logo-right {
         right: 15px;
@@ -111,11 +105,11 @@ a.logo {
         @media (min-width: 1200px) {
             right: calc((100% - 1140px) / 2);
         }
-        img {
-            height: 75px;
-            @media (min-width: 768px) {
-                height: 95px;
-            }
+    }
+    img {
+        width: 100px;
+        @media (min-width: 768px) {
+            width: 135px;
         }
     }
 }

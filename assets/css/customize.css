@@ -41,15 +41,13 @@ a.logo.logo-left { left: 15px; }
 @media (min-width: 768px) { a.logo.logo-left { left: calc((100% - 720px) / 2); } }
 @media (min-width: 992px) { a.logo.logo-left { left: calc((100% - 960px) / 2); } }
 @media (min-width: 1200px) { a.logo.logo-left { left: calc((100% - 1140px) / 2); } }
-a.logo.logo-left img { height: 55px; }
-@media (min-width: 768px) { a.logo.logo-left img { height: 75px; } }
 a.logo.logo-right { right: 15px; }
 @media (min-width: 576px) { a.logo.logo-right { right: calc((100% - 540px) / 2); } }
 @media (min-width: 768px) { a.logo.logo-right { right: calc((100% - 720px) / 2); } }
 @media (min-width: 992px) { a.logo.logo-right { right: calc((100% - 960px) / 2); } }
 @media (min-width: 1200px) { a.logo.logo-right { right: calc((100% - 1140px) / 2); } }
-a.logo.logo-right img { height: 75px; }
-@media (min-width: 768px) { a.logo.logo-right img { height: 95px; } }
+a.logo img { width: 100px; }
+@media (min-width: 768px) { a.logo img { width: 135px; } }
 
 section { min-height: 100%; }
 section.white-fluid { background-image: url("../images/backgroud-light@3x.png"); background-size: cover; background-position: center; background-repeat: no-repeat; }
