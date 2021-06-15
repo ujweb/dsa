@@ -54,7 +54,7 @@ a.logo.logo-right img { height: 75px; }
 section { min-height: 100%; }
 section.white-fluid { background-image: url("../images/backgroud-light@3x.png"); background-size: cover; background-position: center; background-repeat: no-repeat; }
 @media screen and (orientation: portrait) { section.white-fluid { background-position: left; } }
-section .bg-fluid { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url("../images/backgroud-blue@3x.png"); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; z-index: 0; }
+section .bg-fluid { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url("../images/backgroud-blue@3x.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; z-index: 0; }
 @media (min-width: 768px) { section .bg-fluid { position: absolute; height: 100%; } }
 section .bg-fluid::before, section .bg-fluid::after { content: ""; display: block; position: absolute; width: 0; height: 0; border-style: solid; z-index: 0; }
 section .bg-fluid::before { top: 0; left: 0; border-width: 125vh 125vw 0 0; border-color: rgba(0, 140, 214, 0.9) transparent transparent transparent; }
