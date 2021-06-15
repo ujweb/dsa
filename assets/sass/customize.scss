@@ -73,26 +73,49 @@ a, button.btn {
 a.logo {
     position: absolute;
     top: 0;
-    left: 15px;
     @include border-radius(0 0 0.75rem 0.75rem);
     @include box-shadow(0 0 10px 0 rgba($black, 0.2));
     z-index: 2;
-    @media (min-width: 576px) {
-        left: calc((100% - 540px) / 2);
-    }
-    @media (min-width: 768px) {
-        left: calc((100% - 720px) / 2);
-    }
-    @media (min-width: 992px) {
-        left: calc((100% - 960px) / 2);
-    }
-    @media (min-width: 1200px) {
-        left: calc((100% - 1140px) / 2);
-    }
-    img {
-        width: 100px;
+    &.logo-left {
+        left: 15px;
+        @media (min-width: 576px) {
+            left: calc((100% - 540px) / 2);
+        }
         @media (min-width: 768px) {
-            width: 135px;
+            left: calc((100% - 720px) / 2);
+        }
+        @media (min-width: 992px) {
+            left: calc((100% - 960px) / 2);
+        }
+        @media (min-width: 1200px) {
+            left: calc((100% - 1140px) / 2);
+        }
+        img {
+            height: 55px;
+            @media (min-width: 768px) {
+                height: 75px;
+            }
+        }
+    }
+    &.logo-right {
+        right: 15px;
+        @media (min-width: 576px) {
+            right: calc((100% - 540px) / 2);
+        }
+        @media (min-width: 768px) {
+            right: calc((100% - 720px) / 2);
+        }
+        @media (min-width: 992px) {
+            right: calc((100% - 960px) / 2);
+        }
+        @media (min-width: 1200px) {
+            right: calc((100% - 1140px) / 2);
+        }
+        img {
+            height: 75px;
+            @media (min-width: 768px) {
+                height: 95px;
+            }
         }
     }
 }
