@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="159.733" height="161.359" viewBox="0 0 159.733 161.359">
+    <defs>
+        <linearGradient id="c" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ff4f00"/>
+            <stop offset="1" stop-color="#ffeb00"/>
+        </linearGradient>
+        <filter id="b" x="26.366" y="50.358" width="119" height="85" filterUnits="userSpaceOnUse">
+            <feOffset dy="10" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="1" result="c"/>
+            <feFlood flood-opacity="0.102"/>
+            <feComposite operator="in" in2="c"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(-637.634 -561.642)">
+        <path d="M5632.5,154c-43.285,0-78.5-35.44-78.5-79s35.215-79,78.5-79a77.617,77.617,0,0,1,44.081,13.622c4.9-.957,7.812-3.168,8.662-6.587.929-3.741,2.719-5.638,5.32-5.638h2.178l1.913,2.4c2.742,4.247,4.042,19.184,1.129,28.451A78.512,78.512,0,0,1,5711,75C5711,118.561,5675.785,154,5632.5,154Zm0-150c-38.874,0-70.5,31.85-70.5,71s31.626,71,70.5,71S5703,114.15,5703,75a70.609,70.609,0,0,0-14.892-43.648l-1.474-1.9.99-2.194c1.762-3.9,2-10.293,1.647-15.419-2.982,3.142-7.444,5.2-13.12,5.958l-1.571.211-1.29-.923A69.682,69.682,0,0,0,5632.5,4Z" transform="matrix(1, 0.017, -0.017, 1, -4912.833, 468.711)" fill="#ffeb00"/>
+        <path d="M5559,75.5A74.524,74.524,0,0,1,5669.03,10c.758.078,18.04,1.733,20.975-10s7.789,19.622.491,27.521A74.5,74.5,0,1,1,5559,75.5Z" transform="translate(-4911 573)" fill="none"/>
+        <g transform="translate(0 21)">
+            <path d="M5558-1118a75,75,0,0,1,75-75,74.666,74.666,0,0,1,43.407,13.83c5.338-.712,11.891-3.009,13.6-9.832,2.675-10.7,6.939,14.383,2.16,24.9A74.675,74.675,0,0,1,5708-1118a75,75,0,0,1-75,75A75,75,0,0,1,5558-1118Z" transform="translate(-4913 1741)" fill="url(#c)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 637.63, 561.64)" filter="url(#b)">
+            <text transform="translate(29.37 105.36)" fill="#f3f1d5" font-size="72" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">GO</tspan></text>
+        </g>
+    </g>
+</svg>

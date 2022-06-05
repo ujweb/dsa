@@ -38,7 +38,7 @@ $grays: map-merge(
 );
 
 
-$blue:    #008CD6 !default;
+$blue:    #0099DB !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #EF344D !default;
@@ -171,7 +171,7 @@ $body-color:                $gray-900 !default;
 // Style anchor elements.
 
 $link-color:                theme-color("primary") !default;
-$link-decoration:           none !default;
+$link-decoration:           underline !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
 
@@ -192,7 +192,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1280px,
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -204,10 +204,10 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 540px,
+  sm: 620px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1200px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
