@@ -20,6 +20,7 @@ section {
         bottom: 0;
         right: -20px;
         width: 260px;
+        max-height: 35vh;
         @media screen and (min-width: 570px) {
             width: 290px;
         }
@@ -27,21 +28,51 @@ section {
             width: 485px;
         }
     }
+    > img.bg-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 2400px;
+        transform: translate(-50%, -50%);
+    }
     .container {
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         z-index: 1;
+        @media screen and (min-width: 768px) {
+            justify-content: center;
+        }
+        @media screen and (max-width: 991px) {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+        @media screen and (max-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        img {
+            max-width: 100%;
+        }
     }
 }
 
 .logo-group {
-    position: absolute;
-    top: 75px;
-    left: 15px;
     display: flex;
     align-items: center;
-    @media screen and (min-width: 1200px) {
-        top: 100px;
-    }
+    margin-right: auto;
     a.logo {
         display: block;
         padding: 8px;
@@ -63,29 +94,14 @@ section {
     }
 }
 
-.index-page, .option-page, .result-page {
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-bottom: 55px;
-        @media screen and (min-width: 768px) {
-            justify-content: center;
-        }
-    }
+.index-page {
     .content {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-    }
-    img {
-        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: auto;
+        @media screen and (max-width: 767px) {
+            padding-left: 8.5vw;
+            padding-right: 5.5vw;
+        }
     }
     h2 {
         position: relative;
@@ -124,7 +140,7 @@ section {
             width: 200px;
         }
         @media screen and (min-width: 768px) and (max-width: 1023px) {
-            transform: translate(-10%, -30%);
+            transform: translate(-10%, -10%);
         }
         @media screen and (min-width: 570px) and (max-width: 767px) {
             width: 170px;
@@ -132,7 +148,7 @@ section {
         }
         @media screen and (max-width: 569px) {
             width: 125px;
-            transform: translate(-70%, -70%);
+            transform: translate(-40%, -80%);
         }
     }
     a.btn-go {
@@ -163,69 +179,18 @@ section {
 
 .index-page, .option-page {
     section {
-        background-image: url('../images/background-dot.svg');
-        > img.background {
-            position: absolute;
-            max-width: none !important;
-            left: 50%;
-            background-size: cover;
-            object-fit: cover;
-            z-index: 0;
-            @media screen and (orientation: landscape) {
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-            @media screen and (orientation: portrait) {
-                top: 0;
-                transform: translate(-50%, -12%);
-            }
-            &.default {
-                @media screen and (orientation: portrait) {
-                    display: none;
-                }
-            }
-            &.vertical {
-                @media screen and (orientation: landscape) {
-                    display: none;
-                }
-            }
-        }
+        background-image: url(../images/background-dot.svg);
     }
 }
 
-.index-page {
-    .container {
-        padding-top: 125px;
-        @media screen and (min-width: 1200px) {
-            padding-top: 115px;
-            padding-bottom: 75px;
-        }
-    }
+.option-page, .result-page {
     .content {
-        @media screen and (min-width: 570px) and (max-width: 1199px) {
-            padding-left: 20px;
-            max-width: 570px;
-        }
-        @media screen and (min-width: 570px) {
-            padding-left: 40px;
-        }
-        @media screen and (max-width: 767px) {
-            height: auto;
-        }
-        @media screen and (max-width: 569px) {
-            max-width: 300px;
-        }
+        margin-top: 20px;
+        margin-bottom: auto;
     }
 }
 
 .option-page {
-    .container {
-        padding-top: 145px;
-        @media screen and (min-width: 1200px) {
-            padding-top: 205px;
-            padding-bottom: 125px;
-        }
-    }
     .content {
         @media screen and (min-width: 1200px) {
             &.content-md {
@@ -244,19 +209,26 @@ section {
         @media screen and (max-width: 569px) {
             max-width: 300px;
         }
+        @media screen and (max-width: 767px) {
+            padding-left: 4.5vw;
+            padding-right: 2.5vw;
+        }
     }
     h1 {
         margin-bottom: 15px;
-        @include fs(24);
+        @include fs(22);
         letter-spacing: 0.2em;
         text-align: center;
+        @media screen and (min-width: 414px) {
+            @include fs(24);
+        }
         @media screen and (min-width: 570px) {
             @include fs(28);
         }
         @media screen and (min-width: 768px) {
             @include fs(32);
         }
-        @media screen and (min-height: 600px) and (max-height: 800px) {
+        @media screen and (min-width: 768px) and (min-height: 600px) and (max-height: 800px) {
             @include fs(32);
         }
         @media screen and (min-width: 1200px) {
@@ -265,7 +237,10 @@ section {
     }
     .option-group {
         min-width: 210px;
-        @include fs(20);
+        @include fs(18);
+        @media screen and (min-width: 414px) {
+            @include fs(20);
+        }
         @media screen and (min-width: 570px) {
             @include fs(24);
         }
@@ -273,7 +248,7 @@ section {
             width: 410px;
             @include fs(28);
         }
-        @media screen and (min-height: 600px) and (max-height: 800px) {
+        @media screen and (min-width: 768px) and (min-height: 600px) and (max-height: 800px) {
             @include fs(28);
         }
         @media screen and (min-width: 1200px) {
@@ -289,7 +264,7 @@ section {
             border: 3px solid #fff;
             text-decoration: none;
             border-radius: 40px;
-            @media screen and (min-height: 600px) and (max-height: 800px) {
+            @media screen and (max-height: 800px) {
                 margin-top: 10px;
             }
             &:hover {
@@ -303,57 +278,17 @@ section {
 .result-page, .success-page {
     section {
         &:first-child {
-            background-image: url('../images/result-background-dot.svg');
-        }
-        > img {
-            position: absolute;
-            max-width: none !important;
-            left: 50%;
-            object-fit: cover;
-            z-index: 0;
-            &.default {
-                @media screen and (orientation: portrait) {
-                    display: none;
-                }
-            }
-            &.vertical {
-                @media screen and (orientation: landscape) {
-                    display: none;
-                }
-            }
+            background-image: url('../images/result/background-dot.svg');
         }
     }
 }
 
 .result-page {
-    section {
-        > img {
-            top: 0;
-            @media screen and (orientation: landscape) {
-                transform: translate(-49%, -7%);
-                @media screen and (min-width: 1200px) {
-                    transform: translate(-52%, -9%);
-                }
-            }
-            @media screen and (orientation: portrait) {
-                transform: translate(-48.5%, -1%);
-            }
-        }
-    }
-    .container {
-        padding-top: 145px;
-        @media screen and (min-width: 768px) {
-            padding-top: 85px;
-        }
-        @media screen and (min-width: 1200px) {
-            padding-top: 125px;
-            padding-bottom: 125px;
-        }
-    }
     h1 {
         @include fs(34);
         letter-spacing: 0.2em;
         @media screen and (min-width: 1024px) {
+            margin-top: -75px;
             @include fs(38);
         }
         @media screen and (min-width: 1200px) {
@@ -401,12 +336,12 @@ section {
         }
     }
     form {
-        @include fs(17);
+        @include fs(16);
         @media screen and (min-width: 1024px) {
-            @include fs(19);
+            @include fs(18);
         }
         @media screen and (min-width: 1200px) {
-            @include fs(21);
+            @include fs(20);
         }
         > div {
             &:not(.button-center) {
@@ -419,14 +354,13 @@ section {
             }
         }
         label {
-            @media screen and (min-width: 768px) {
-                width: 6em;
-            }
+            width: 6.5em;
+            color: rgba(black, 0.8);
         }
         input {
             &[type='text'],
             &[type='tel'] {
-                width: 100%;
+                width: calc(100% - 6.5em);
                 padding-left: 30px;
                 padding-right: 30px;
                 border: 1px solid rgba(black, 0.5);
@@ -444,10 +378,9 @@ section {
         button {
             display: block;
             min-width: 210px;
-            padding: 6px 20px;
-            margin-top: 20px;
+            padding: 7px 20px;
             color: #fff;
-            @include fs(24);
+            @include fs(18);
             text-align: center;
             background-color: #FF4E00;
             border: 3px solid #fff;
@@ -458,10 +391,10 @@ section {
                 width: 410px;
             }
             @media screen and (min-width: 1024px) {
-                @include fs(28);
+                @include fs(23);
             }
             @media screen and (min-width: 1200px) {
-                @include fs(32);
+                @include fs(28);
             }
             &:hover {
                 background-color: darken(#FF4E00, 5%);
@@ -472,16 +405,22 @@ section {
             margin-left: auto;        
             margin-right: auto;        
             padding-left: 0;
+            color: #707070;
             list-style: none;
             @include fs(12);
             li {
                 position: relative;
                 padding-left: 1.25em;
                 &::before {
-                    content: '❖';
+                    content: '';
                     position: absolute;
-                    top: 0;
+                    top: 4px;
                     left: 0;
+                    width: 10px;
+                    height: 10px;
+                    background-image: url('../images/checkmark.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
                 }
             }
         }
@@ -490,18 +429,6 @@ section {
 
 .success-page {
     section {
-        > img {
-            bottom: 20px;
-            @media screen and (orientation: landscape) {
-                transform: translateX(-49%);
-                @media screen and (min-width: 1200px) {
-                    transform: translateX(-52%);
-                }
-            }
-            @media screen and (orientation: portrait) {
-                transform: translateX(-48.5%);
-            }
-        }
         h1 {
             @include fs(34);
             letter-spacing: 0.2em;
@@ -523,14 +450,19 @@ section {
             }
         }
         &:first-child {
+            min-height: 580px !important;
+            @media screen and (min-width: 1024px) {
+                min-height: 800px !important;
+            }
             .container {
-                padding-top: 155px;
-                padding-bottom: 245px;
-                @media screen and (min-width: 768px) {
-                    padding-top: 205px;
-                }
-                @media screen and (min-width: 1200px) {
-                    padding-top: 125px;
+                min-height: auto !important;
+            }
+            > img.bg-img {
+                top: auto;
+                bottom: -30vw;
+                transform: translateX(-50%);
+                @media screen and (min-width: 1024px) {
+                    bottom: -10vw;
                 }
             }
         }

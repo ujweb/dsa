@@ -20,8 +20,8 @@
 </head>
 <body class="result-page">
     <section>
-        <img src="assets/images/result-background.svg" class="background default" alt="">
-        <img src="assets/images/result-background-vertical.svg" class="background vertical" alt="">
+        <img src="assets/images/result/background@3x.png" class="d-lg-block d-none bg-img bg-img-desktop" alt="">
+        <img src="assets/images/result/background-vertical@3x.png" class="d-lg-none bg-img bg-img-mobile" alt="">
         <div class="container">
             <div class="logo-group">
                 <a href="https://www.dsa.org.tw/index.php" class="logo logo-dsa">
@@ -31,32 +31,37 @@
                     <img src="assets/images/tdsa-logo.png" alt="">
                 </a>
             </div>
-            <h1 class="text-primary my-0 text-center">作答完成！</h1>
-            <p class="h5 text-black-50 mt-10 mb-20 letter-spacing-2 text-center">留下您的資料，就有機會獲得大獎</p>
+            <h1 class="text-primary mt-xl-10 mb-0 text-center">作答完成！</h1>
+            <p class="h5 text-black-50 mt-10 mb-md-15 mb-0 letter-spacing-2 text-center">留下您的資料，就有機會獲得大獎</p>
             <form action="success.html">
-                <div class="d-flex align-items-center h6 mt-20 mb-0">
-                    <label class="d-block mt-0 mb-md-0 mb-10 mr-md-40" for="name">姓名</label>
+                <div class="d-flex align-items-center h6 mt-15 mb-0">
+                    <label class="d-block my-0" for="name">姓名</label>
                     <input class="d-block px-20 py-5 bg-white" type="text" id="name" name="name" required value="">
                 </div>
-                <div class="d-flex align-items-center h6 mt-20 mb-0">
-                    <label class="d-block mt-0 mb-md-0 mb-10 mr-md-40" for="phone">電話</label>
+                <div class="d-flex align-items-center h6 mt-15 mb-0">
+                    <label class="d-block my-0" for="phone">電話</label>
                     <input class="d-block px-20 py-5 bg-white" type="tel" id="phone" name="phone" required value="">
                 </div>
-                <div class="d-flex align-items-center h6 mt-20 mb-0">
-                    <label class="d-block mt-0 mb-md-0 mb-10 mr-md-40" for="addr">聯絡地址</label>
+                <div class="d-flex align-items-center h6 mt-15 mb-0">
+                    <label class="d-block my-0" for="addr">聯絡地址</label>
                     <input class="d-block px-20 py-5 bg-white" type="text" id="addr" name="addr" required value="">
                 </div>
-                <div class="d-flex align-items-center h6 mt-20 mb-0">
-                    <label class="d-block mt-0 mb-md-0 mb-10 mr-md-40" for="company">所屬直銷公司</label>
+                <div class="d-flex align-items-center h6 mt-15 mb-0">
+                    <label class="d-block my-0" for="company">所屬直銷公司</label>
                     <input class="d-block px-20 py-5 bg-white" type="text" id="company" name="company" value="">
                 </div>
-                <div class="button-center d-flex align-items-center h6 mt-10 mb-0">
+                <div class="button-center d-flex align-items-center h6 mt-5 mb-0">
                     <input class="d-block my-0 mr-10" type="checkbox" id="single" name="single" value="single">
                     <label class="d-block my-0" for="single">我是一般消費者（不用填寫所屬直銷公司）</label>
                 </div>
-                <div class="button-center h6 text-center mt-40 mb-0">
+                <div class="button-center h6 text-center mt-15 mb-0">
                     <button class="btn mx-auto" type="submit">送出</button>
                 </div>
+                <ul class="policy text-left mt-15 mb-0">
+                    <li><span class="d-md-block">當您送出個人資料即視同您已同意主辦單位蒐集處理以上個人資料，</span><span class="d-md-block">作為本活動資格審核、中獎人別公布與聯繫、獎品寄送使用。</span></li>
+                    <li>各獎項之所得獎品應依稅法規定扣繳所得稅。</li>
+                    <li>參與者應確保填寫之資料正確，若因資料錯誤導致無法聯繫，主辦單位概不負責。</li>
+                </ul>
             </form>
         </div>
     </section>
